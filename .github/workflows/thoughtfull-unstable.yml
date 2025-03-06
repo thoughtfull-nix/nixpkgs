@@ -1,0 +1,64 @@
+# Keep nixos-unstable up-to-date with changes from upstream and thoughtfull branches.
+#
+# Difference from upstream should be only thoughtfull branches:
+# https://github.com/NixOS/nixpkgs/compare/nixos-unstable...thoughtfull-nix:nixpkgs:nixos-unstable
+name: Update nixos-unstable
+on:
+  push:
+    branches:
+      - workflows
+      - initrd-dhcp-background
+  schedule:
+    # every day at midnight EST/EDT
+    - cron: "0 4,5 * * *"
+  workflow_dispatch:
+concurrency:
+  group: ${{github.workflow}}
+  cancel-in-progress: true
+jobs:
+  update:
+    defaults:
+      run:
+        shell: bash
+    name: Update nixos-unstable
+    runs-on: ubuntu-latest
+    steps:
+      # Workaround lack of timezone support in Github Action crons
+      # https://github.com/orgs/community/discussions/13454#discussioncomment-11159669
+      - name: Check if it's midnight
+        run: |
+          current_hour=$(TZ='America/New_York' date +'%H')
+          echo "Current hour in EST/EDT: $current_hour"
+
+          if [[ "${{github.event_name}}" != "schedule" || "$current_hour" == "00" ]]; then
+            echo "It's midnight EST/EDT (or not)! Running tasks..."
+            echo "run_steps=true" >> $GITHUB_ENV
+          else
+            echo "It's not midnight EST/EDT! Skipping tasks."
+          fi
+      - name: Checkout repository
+        if: env.run_steps == 'true'
+        uses: thoughtfull-systems/checkout-then-configure@main
+        with:
+          ref: nixos-unstable
+          fetch-depth: 0
+          # Upstream occasionally changes workflows and to pull those changes we need `workflows`
+          # write permission which is not possible with the default Github token
+          token: ${{secrets.PAT}}
+      - name: Add upstream remote
+        if: env.run_steps == 'true'
+        run: |
+          git remote add -t nixos-unstable --no-tags -f upstream "https://github.com/nixos/nixpkgs.git"
+      - name: Merge from upstream
+        if: env.run_steps == 'true'
+        run: |
+          git merge --no-ff upstream/nixos-unstable
+      - name: Merge thoughtfull branches
+        if: env.run_steps == 'true'
+        run: |
+          git merge --no-ff origin/workflows
+          git merge --no-ff origin/initrd-dhcp-background
+      - name: Push to origin
+        if: env.run_steps == 'true'
+        run: |
+          git push origin nixos-unstable
