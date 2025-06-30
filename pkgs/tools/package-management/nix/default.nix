@@ -236,9 +236,9 @@ lib.makeExtensible (
       };
 
       nix_2_26 = commonMeson {
-        version = "2.26.3";
-        hash = "sha256-R+HAPvD+AjiyRHZP/elkvka33G499EKT8ntyF/EPPRI=";
-        self_attribute_name = "nix_2_28";
+        version = "2.26.4";
+        hash = "sha256-WmGMiwwC9RLomNtpDeRoe5bqBAH84A6pLcqi1MbcQi4=";
+        self_attribute_name = "nix_2_26";
       };
 
       nix_2_28 = commonMeson {
