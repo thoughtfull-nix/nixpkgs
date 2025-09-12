@@ -228958,6 +228958,7 @@ self: {
           gflags,
           ghc,
           ghci,
+          glog,
           hashable,
           haskell-src-exts,
           hspec,
@@ -228967,7 +228968,6 @@ self: {
           json,
           lens,
           libevent,
-          libglog,
           lifted-base,
           mangle,
           monad-control,
@@ -229055,8 +229055,8 @@ self: {
             double-conversion
             fmt
             gflags
+            glog
             libevent
-            libglog
           ];
           testHaskellDepends = [
             aeson
@@ -229098,8 +229098,8 @@ self: {
         inherit (pkgs) double-conversion;
         inherit (pkgs) fmt;
         inherit (pkgs) gflags;
+        inherit (pkgs) glog;
         inherit (pkgs) libevent;
-        libglog = null;
       };
 
   "fbmessenger-api" = callPackage (
@@ -424503,7 +424503,7 @@ self: {
       base,
       bytestring,
       derive-storable,
-      llama,
+      llama-cpp,
       tasty,
       tasty-hunit,
     }:
@@ -424516,7 +424516,7 @@ self: {
         bytestring
         derive-storable
       ];
-      librarySystemDepends = [ llama ];
+      librarySystemDepends = [ llama-cpp ];
       testHaskellDepends = [
         base
         bytestring
@@ -424529,7 +424529,7 @@ self: {
       hydraPlatforms = lib.platforms.none;
       broken = true;
     }
-  ) { llama = null; };
+  ) { inherit (pkgs) llama-cpp; };
 
   "llrbtree" = callPackage (
     { mkDerivation, base }:
@@ -491279,7 +491279,7 @@ self: {
       JuicyPixels,
       lens,
       linear,
-      opencv3,
+      opencv,
       primitive,
       QuickCheck,
       repa,
@@ -491319,7 +491319,7 @@ self: {
         transformers
         vector
       ];
-      libraryPkgconfigDepends = [ opencv3 ];
+      libraryPkgconfigDepends = [ opencv ];
       testHaskellDepends = [
         base
         bytestring
@@ -491348,13 +491348,12 @@ self: {
         criterion
         repa
       ];
-      hardeningDisable = [ "bindnow" ];
       description = "Haskell binding to OpenCV-3.x";
       license = lib.licenses.bsd3;
       hydraPlatforms = lib.platforms.none;
       broken = true;
     }
-  ) { inherit (pkgs) opencv3; };
+  ) { inherit (pkgs) opencv; };
 
   "opencv-extra" = callPackage (
     {
@@ -500315,7 +500314,6 @@ self: {
         text
         yaml
       ];
-      doCheck = false;
       description = "Supports using pandoc with citeproc";
       license = lib.licenses.bsd3;
       hydraPlatforms = lib.platforms.none;
@@ -734456,13 +734454,13 @@ self: {
       deepseq,
       digest,
       hashable,
-      libxxhash,
       murmur-hash,
       QuickCheck,
       tasty,
       tasty-bench,
       tasty-quickcheck,
       text,
+      xxHash,
     }:
     mkDerivation {
       pname = "xxhash-ffi";
@@ -734476,7 +734474,7 @@ self: {
         hashable
         text
       ];
-      libraryPkgconfigDepends = [ libxxhash ];
+      libraryPkgconfigDepends = [ xxHash ];
       testHaskellDepends = [
         base
         bytestring
@@ -734500,7 +734498,7 @@ self: {
       hydraPlatforms = lib.platforms.none;
       broken = true;
     }
-  ) { libxxhash = null; };
+  ) { inherit (pkgs) xxHash; };
 
   "xz" = callPackage (
     {
