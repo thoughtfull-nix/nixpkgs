@@ -1612,10 +1612,6 @@ with pkgs;
     httpServer = true;
   };
 
-  bashate = python3Packages.callPackage ../development/tools/bashate {
-    python3Packages = python311Packages;
-  };
-
   inherit (callPackages ../tools/security/bitwarden-directory-connector { })
     bitwarden-directory-connector-cli
     bitwarden-directory-connector
@@ -4406,9 +4402,7 @@ with pkgs;
 
   ufmt = with python3Packages; toPythonApplication ufmt;
 
-  uim = callPackage ../tools/inputmethods/uim {
-    autoconf = buildPackages.autoconf269;
-  };
+  uim = callPackage ../tools/inputmethods/uim { };
 
   unbound-with-systemd = unbound.override {
     withSystemd = true;
@@ -5996,7 +5990,8 @@ with pkgs;
   jpm = callPackage ../development/interpreters/janet/jpm.nix { };
 
   davmail = callPackage ../applications/networking/davmail {
-    zulu = zulu11;
+    jre = jdk11.override { enableJavaFX = true; };
+    zulu = zulu11.override { enableJavaFX = true; };
   };
 
   lambda-lisp-blc = lambda-lisp;
@@ -6454,12 +6449,14 @@ with pkgs;
     electron_35-bin
     electron_36-bin
     electron_37-bin
+    electron_38-bin
     ;
 
   inherit (callPackages ../development/tools/electron/chromedriver { })
     electron-chromedriver_35
     electron-chromedriver_36
     electron-chromedriver_37
+    electron-chromedriver_38
     ;
 
   electron_35 =
@@ -6477,6 +6474,11 @@ with pkgs;
       electron-source.electron_37
     else
       electron_37-bin;
+  electron_38 =
+    if lib.meta.availableOn stdenv.hostPlatform electron-source.electron_38 then
+      electron-source.electron_38
+    else
+      electron_38-bin;
   electron = electron_37;
   electron-bin = electron_37-bin;
   electron-chromedriver = electron-chromedriver_37;
@@ -9190,7 +9192,7 @@ with pkgs;
     zig_0_15
     ;
 
-  zig = zig_0_14;
+  zig = zig_0_15;
 
   zigStdenv = if stdenv.cc.isZig then stdenv else lowPrio zig.passthru.stdenv;
 
@@ -11398,10 +11400,10 @@ with pkgs;
     emacs30-nox
     emacs30-pgtk
 
-    emacs29-macport
+    emacs30-macport
     ;
 
-  emacs-macport = emacs29-macport;
+  emacs-macport = emacs30-macport;
   emacs = emacs30;
   emacs-gtk = emacs30-gtk3;
   emacs-nox = emacs30-nox;
@@ -11625,18 +11627,6 @@ with pkgs;
     ];
   };
 
-  floorp-unwrapped = import ../applications/networking/browsers/floorp {
-    inherit
-      stdenv
-      lib
-      fetchFromGitHub
-      buildMozillaMach
-      nixosTests
-      ;
-  };
-
-  floorp = wrapFirefox floorp-unwrapped { };
-
   formiko =
     with python3Packages;
     callPackage ../applications/editors/formiko {
@@ -11727,11 +11717,11 @@ with pkgs;
 
   manim = python3Packages.toPythonApplication python3Packages.manim;
 
-  manim-slides = python3Packages.toPythonApplication (
-    python3Packages.manim-slides.override {
-      withGui = true;
-    }
-  );
+  manim-slides =
+    (python3Packages.toPythonApplication python3Packages.manim-slides).overridePythonAttrs
+      (oldAttrs: {
+        dependencies = oldAttrs.dependencies ++ oldAttrs.optional-dependencies.pyqt6-full;
+      });
 
   manuskript = libsForQt5.callPackage ../applications/editors/manuskript { };
 
@@ -11762,12 +11752,6 @@ with pkgs;
     withGUI = true;
     withDoc = true;
   };
-
-  gpxsee-qt5 = libsForQt5.callPackage ../applications/misc/gpxsee { };
-
-  gpxsee-qt6 = qt6Packages.callPackage ../applications/misc/gpxsee { };
-
-  gpxsee = gpxsee-qt5;
 
   guvcview = libsForQt5.callPackage ../os-specific/linux/guvcview { };
 
@@ -12070,9 +12054,6 @@ with pkgs;
     llvmPackages = llvmPackages_18;
   };
 
-  alkimia = kdePackages.callPackage ../development/libraries/alkimia { };
-  kmymoney = kdePackages.callPackage ../applications/office/kmymoney { };
-
   kotatogram-desktop =
     callPackage ../applications/networking/instant-messengers/telegram/kotatogram-desktop
       { };
@@ -12351,10 +12332,6 @@ with pkgs;
   pragha = libsForQt5.callPackage ../applications/audio/pragha { };
 
   rofi-emoji = (callPackage ../applications/misc/rofi-emoji { }).v3;
-  rofi-emoji-wayland =
-    (callPackage ../applications/misc/rofi-emoji {
-      rofi-unwrapped = rofi-wayland-unwrapped;
-    }).v4;
 
   rofi-rbw = python3Packages.callPackage ../applications/misc/rofi-rbw {
     waylandSupport = false;
@@ -12844,10 +12821,6 @@ with pkgs;
 
   rofi-unwrapped = callPackage ../applications/misc/rofi { };
   rofi = callPackage ../applications/misc/rofi/wrapper.nix { };
-  rofi-wayland-unwrapped = callPackage ../applications/misc/rofi/wayland.nix { };
-  rofi-wayland = callPackage ../applications/misc/rofi/wrapper.nix {
-    rofi-unwrapped = rofi-wayland-unwrapped;
-  };
 
   rofi-pass = callPackage ../tools/security/pass/rofi-pass.nix { };
   rofi-pass-wayland = callPackage ../tools/security/pass/rofi-pass.nix {
@@ -12875,7 +12848,7 @@ with pkgs;
 
   scantailor-universal = callPackage ../applications/graphics/scantailor/universal.nix { };
 
-  seafile-client = libsForQt5.callPackage ../applications/networking/seafile-client { };
+  seafile-client = qt6Packages.callPackage ../applications/networking/seafile-client { };
 
   seq66 = qt5.callPackage ../applications/audio/seq66 { };
 
@@ -13453,10 +13426,6 @@ with pkgs;
   wrapThunderbird = callPackage ../applications/networking/mailreaders/thunderbird/wrapper.nix { };
 
   wsjtx = qt5.callPackage ../applications/radio/wsjtx { };
-
-  x11basic = callPackage ../development/compilers/x11basic {
-    autoconf = buildPackages.autoconf269;
-  };
 
   x2goclient = callPackage ../applications/networking/remote/x2goclient { };
 
@@ -14416,8 +14385,6 @@ with pkgs;
 
   liblapack = lapack-reference;
 
-  nota = haskellPackages.callPackage ../applications/science/math/nota { };
-
   notus-scanner = with python3Packages; toPythonApplication notus-scanner;
 
   openblas = callPackage ../development/libraries/science/math/openblas {
@@ -15070,7 +15037,7 @@ with pkgs;
     );
 
   nix-eval-jobs = callPackage ../tools/package-management/nix-eval-jobs {
-    nixComponents = nixVersions.nixComponents_2_30;
+    nixComponents = nixVersions.nixComponents_2_31;
   };
 
   nix-delegate = haskell.lib.compose.justStaticExecutables haskellPackages.nix-delegate;
