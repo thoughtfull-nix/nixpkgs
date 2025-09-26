@@ -190,6 +190,7 @@ in
   activation-etc-overlay-mutable = runTest ./activation/etc-overlay-mutable.nix;
   activation-lib = pkgs.callPackage ../modules/system/activation/lib/test.nix { };
   activation-nix-channel = runTest ./activation/nix-channel.nix;
+  activation-nixos-init = runTest ./activation/nixos-init.nix;
   activation-perlless = runTest ./activation/perlless.nix;
   activation-var = runTest ./activation/var.nix;
   actual = runTest ./actual.nix;
@@ -254,6 +255,7 @@ in
   ayatana-indicators = runTest ./ayatana-indicators.nix;
   babeld = runTest ./babeld.nix;
   bazarr = runTest ./bazarr.nix;
+  bcache = runTestOn [ "x86_64-linux" "aarch64-linux" ] ./bcache.nix;
   bcachefs = runTestOn [ "x86_64-linux" "aarch64-linux" ] ./bcachefs.nix;
   beanstalkd = runTest ./beanstalkd.nix;
   bees = runTest ./bees.nix;
@@ -1141,6 +1143,7 @@ in
   pam-u2f = runTest ./pam/pam-u2f.nix;
   pam-ussh = runTest ./pam/pam-ussh.nix;
   pam-zfs-key = runTest ./pam/zfs-key.nix;
+  pangolin = runTest ./pangolin.nix;
   pantalaimon = runTest ./matrix/pantalaimon.nix;
   pantheon = runTest ./pantheon.nix;
   paperless = runTest ./paperless.nix;
