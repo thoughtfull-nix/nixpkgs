@@ -2567,6 +2567,8 @@ self: super: with self; {
 
   chat-downloader = callPackage ../development/python-modules/chat-downloader { };
 
+  chatlas = callPackage ../development/python-modules/chatlas { };
+
   check-manifest = callPackage ../development/python-modules/check-manifest { };
 
   checkdmarc = callPackage ../development/python-modules/checkdmarc { };
@@ -3448,6 +3450,8 @@ self: super: with self; {
   dataclasses-json = callPackage ../development/python-modules/dataclasses-json { };
 
   dataclasses-serialization = callPackage ../development/python-modules/dataclasses-serialization { };
+
+  dataconf = callPackage ../development/python-modules/dataconf { };
 
   datadiff = callPackage ../development/python-modules/datadiff { };
 
@@ -4763,6 +4767,8 @@ self: super: with self; {
 
   elkm1-lib = callPackage ../development/python-modules/elkm1-lib { };
 
+  elkoep-aio-mqtt = callPackage ../development/python-modules/elkoep-aio-mqtt { };
+
   elmax = callPackage ../development/python-modules/elmax { };
 
   elmax-api = callPackage ../development/python-modules/elmax-api { };
@@ -5205,6 +5211,8 @@ self: super: with self; {
   );
 
   faust-cchardet = callPackage ../development/python-modules/faust-cchardet { };
+
+  fava = callPackage ../development/python-modules/fava { };
 
   favicon = callPackage ../development/python-modules/favicon { };
 
@@ -8575,8 +8583,6 @@ self: super: with self; {
   limnoria = callPackage ../development/python-modules/limnoria { };
 
   line-profiler = callPackage ../development/python-modules/line-profiler { };
-
-  linear-garage-door = callPackage ../development/python-modules/linear-garage-door { };
 
   linear-operator = callPackage ../development/python-modules/linear-operator { };
 
@@ -13832,6 +13838,12 @@ self: super: with self; {
 
   pyobjc-framework-Cocoa = callPackage ../development/python-modules/pyobjc-framework-Cocoa { };
 
+  pyobjc-framework-Quartz = callPackage ../development/python-modules/pyobjc-framework-Quartz { };
+
+  pyobjc-framework-Security = callPackage ../development/python-modules/pyobjc-framework-Security { };
+
+  pyobjc-framework-WebKit = callPackage ../development/python-modules/pyobjc-framework-WebKit { };
+
   pyocd = callPackage ../development/python-modules/pyocd { };
 
   pyocd-pemicro = callPackage ../development/python-modules/pyocd-pemicro { };
@@ -14686,6 +14698,8 @@ self: super: with self; {
   pytest-freezegun = callPackage ../development/python-modules/pytest-freezegun { };
 
   pytest-freezer = callPackage ../development/python-modules/pytest-freezer { };
+
+  pytest-gitconfig = callPackage ../development/python-modules/pytest-gitconfig { };
 
   pytest-golden = callPackage ../development/python-modules/pytest-golden { };
 
@@ -16924,6 +16938,8 @@ self: super: with self; {
   shimmy = callPackage ../development/python-modules/shimmy { };
 
   shiny = callPackage ../development/python-modules/shiny { };
+
+  shinychat = callPackage ../development/python-modules/shinychat { };
 
   shippinglabel = callPackage ../development/python-modules/shippinglabel { };
 
@@ -19543,6 +19559,8 @@ self: super: with self; {
 
   types-mock = callPackage ../development/python-modules/types-mock { };
 
+  types-mysqlclient = callPackage ../development/python-modules/types-mysqlclient { };
+
   types-pillow = callPackage ../development/python-modules/types-pillow { };
 
   types-protobuf = callPackage ../development/python-modules/types-protobuf { };
@@ -19582,6 +19600,8 @@ self: super: with self; {
   types-ujson = callPackage ../development/python-modules/types-ujson { };
 
   types-urllib3 = callPackage ../development/python-modules/types-urllib3 { };
+
+  types-webencodings = callPackage ../development/python-modules/types-webencodings { };
 
   types-xxhash = callPackage ../development/python-modules/types-xxhash { };
 
@@ -19692,6 +19712,8 @@ self: super: with self; {
   unasync = callPackage ../development/python-modules/unasync { };
 
   uncertainties = callPackage ../development/python-modules/uncertainties { };
+
+  uncompresspy = callPackage ../development/python-modules/uncompresspy { };
 
   uncompyle6 = callPackage ../development/python-modules/uncompyle6 { };
 
@@ -20694,6 +20716,8 @@ self: super: with self; {
   yt-dlp = toPythonModule (pkgs.yt-dlp.override { python3Packages = self; });
 
   yt-dlp-dearrow = callPackage ../development/python-modules/yt-dlp-dearrow { };
+
+  yt-dlp-ejs = callPackage ../development/python-modules/yt-dlp-ejs { };
 
   yt-dlp-light = toPythonModule (pkgs.yt-dlp-light.override { python3Packages = self; });
 
