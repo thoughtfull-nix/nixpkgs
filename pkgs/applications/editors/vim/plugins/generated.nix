@@ -8172,6 +8172,19 @@ final: prev: {
     meta.hydraPlatforms = [ ];
   };
 
+  markdoc-nvim = buildVimPlugin {
+    pname = "markdoc.nvim";
+    version = "2025-11-14";
+    src = fetchFromGitHub {
+      owner = "OXY2DEV";
+      repo = "markdoc.nvim";
+      rev = "12607a127ba7c3890c3ab6e7b2a60f65b6d6d3ec";
+      sha256 = "1ghiylf4j4k5s7zs200dznqs8zi30py1a45ykbrw3b08v8xv3mkv";
+    };
+    meta.homepage = "https://github.com/OXY2DEV/markdoc.nvim/";
+    meta.hydraPlatforms = [ ];
+  };
+
   markdown-nvim = buildVimPlugin {
     pname = "markdown.nvim";
     version = "2025-10-03";
@@ -9145,6 +9158,19 @@ final: prev: {
       sha256 = "0hiwvkgx42kdshmzzjmy9wjw339j88i2kkzq334ma4ajn59nc837";
     };
     meta.homepage = "https://github.com/loctvl842/monokai-pro.nvim/";
+    meta.hydraPlatforms = [ ];
+  };
+
+  moonlight-nvim = buildVimPlugin {
+    pname = "moonlight.nvim";
+    version = "2021-05-16";
+    src = fetchFromGitHub {
+      owner = "shaunsingh";
+      repo = "moonlight.nvim";
+      rev = "e24e4218ec680b6396532808abf57ca0ada82e66";
+      sha256 = "0m9w3fpypsqxydjd93arbjqb5576nl40iy27i4ijlrqhgdhl49y3";
+    };
+    meta.homepage = "https://github.com/shaunsingh/moonlight.nvim/";
     meta.hydraPlatforms = [ ];
   };
 
@@ -13128,19 +13154,6 @@ final: prev: {
       sha256 = "1ri0chivm5fv7hgdljd5dls60kf1xhckg66lk5h4b3qkxpksmr2s";
     };
     meta.homepage = "https://github.com/Shougo/pum.vim/";
-    meta.hydraPlatforms = [ ];
-  };
-
-  pure-lua = buildVimPlugin {
-    pname = "pure-lua";
-    version = "2021-05-16";
-    src = fetchFromGitHub {
-      owner = "shaunsingh";
-      repo = "moonlight.nvim";
-      rev = "e24e4218ec680b6396532808abf57ca0ada82e66";
-      sha256 = "0m9w3fpypsqxydjd93arbjqb5576nl40iy27i4ijlrqhgdhl49y3";
-    };
-    meta.homepage = "https://github.com/shaunsingh/moonlight.nvim/";
     meta.hydraPlatforms = [ ];
   };
 

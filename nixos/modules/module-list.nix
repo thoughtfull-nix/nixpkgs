@@ -678,6 +678,7 @@
   ./services/hardware/powerstation.nix
   ./services/hardware/rasdaemon.nix
   ./services/hardware/ratbagd.nix
+  ./services/hardware/rauc.nix
   ./services/hardware/sane.nix
   ./services/hardware/sane_extra_backends/brscan4.nix
   ./services/hardware/sane_extra_backends/brscan5.nix
@@ -832,6 +833,7 @@
   ./services/misc/dwm-status.nix
   ./services/misc/dysnomia.nix
   ./services/misc/errbot.nix
+  ./services/misc/ersatztv.nix
   ./services/misc/etebase-server.nix
   ./services/misc/etesync-dav.nix
   ./services/misc/evdevremapkeys.nix
@@ -1160,9 +1162,11 @@
   ./services/networking/ferm.nix
   ./services/networking/firefox-syncserver.nix
   ./services/networking/fireqos.nix
+  ./services/networking/firewall-firewalld.nix
   ./services/networking/firewall-iptables.nix
   ./services/networking/firewall-nftables.nix
   ./services/networking/firewall.nix
+  ./services/networking/firewalld
   ./services/networking/firezone/gateway.nix
   ./services/networking/firezone/gui-client.nix
   ./services/networking/firezone/headless-client.nix
@@ -1644,6 +1648,7 @@
   ./services/web-apps/libretranslate.nix
   ./services/web-apps/limesurvey.nix
   ./services/web-apps/linkwarden.nix
+  ./services/web-apps/lubelogger.nix
   ./services/web-apps/mainsail.nix
   ./services/web-apps/mastodon.nix
   ./services/web-apps/matomo.nix

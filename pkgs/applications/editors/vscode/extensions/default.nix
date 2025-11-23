@@ -727,8 +727,8 @@ let
         mktplcRef = {
           name = "vscode-intelephense-client";
           publisher = "bmewburn";
-          version = "1.15.0";
-          hash = "sha256-91udkAS7pB5ia0UgfTPHCDjzVfbKKOeXi5LAp/D3EkY=";
+          version = "1.15.3";
+          hash = "sha256-0GgXdBpEcJVqQ1FXBlN1vAqhPUgi/3WBMaPZH2M545A=";
         };
         meta = {
           description = "PHP code intelligence for Visual Studio Code";
@@ -1156,8 +1156,8 @@ let
         mktplcRef = {
           publisher = "DanielSanMedium";
           name = "dscodegpt";
-          version = "3.14.172";
-          hash = "sha256-bJnGao3RrbjeMSkRkakM6UA9piYGEzwMInoBOev2YeM=";
+          version = "3.14.190";
+          hash = "sha256-OPnDQuXge9mGiTMpOBwOBnAXI4rDru//Pks1zygkYWk=";
         };
         meta = {
           changelog = "https://marketplace.visualstudio.com/items/DanielSanMedium.dscodegpt/changelog";
@@ -1242,8 +1242,8 @@ let
         mktplcRef = {
           name = "languagetool-linter";
           publisher = "davidlday";
-          version = "0.25.1";
-          hash = "sha256-rfBIHGRxCAzGZXSeWpMJzDsJxkBYYLpwdmUdEkwbM9I=";
+          version = "0.25.2";
+          hash = "sha256-LVOjY0ZOrgPI6XDVXpJbfT7Z+x5VR5glsL4+HKwlbys=";
         };
         meta = {
           description = "LanguageTool integration for VS Code";
@@ -1965,8 +1965,8 @@ let
         mktplcRef = {
           name = "gitlab-workflow";
           publisher = "gitlab";
-          version = "6.57.1";
-          hash = "sha256-w/qYR1nJ3+Z/4APFGUJwRCHc7gxjFbGTuh3Wl2kH6+g=";
+          version = "6.57.4";
+          hash = "sha256-dkDRRzxcDbzKw7L7wyHkoK4awSNxVapsO5tZoc/+zFk=";
         };
         meta = {
           description = "GitLab extension for Visual Studio Code";
@@ -2619,8 +2619,8 @@ let
         mktplcRef = {
           name = "language-julia";
           publisher = "julialang";
-          version = "1.149.2";
-          hash = "sha256-4IScbHi9iKd4zn0J5HG6FAdIXESwMrh0u07gw9TZJJ4=";
+          version = "1.158.2";
+          hash = "sha256-H3T/SiBqkjhItFDfGlVM+UINimrWlLryampggFPhvzM=";
         };
         meta = {
           changelog = "https://marketplace.visualstudio.com/items/julialang.language-julia/changelog";
@@ -3852,8 +3852,8 @@ let
         mktplcRef = {
           publisher = "redhat";
           name = "java";
-          version = "1.47.0";
-          hash = "sha256-zxhNZJWi4mjENzHsO74FjOrztl5uZbVU3aMPO5DwGRo=";
+          version = "1.48.0";
+          hash = "sha256-/JW5PVM4USBflC5eloi8u9AgpdIzkpEmoHKYr1yVkgI=";
         };
         buildInputs = [ jdk ];
         meta = {
@@ -3932,6 +3932,22 @@ let
       };
 
       robocorp.robotframework-lsp = callPackage ./robocorp.robotframework-lsp { };
+
+      rocq-prover.vsrocq = buildVscodeMarketplaceExtension {
+        mktplcRef = {
+          publisher = "rocq-prover";
+          name = "vsrocq";
+          version = "2.3.2";
+          hash = "sha256-S3rKCzdGb5/UAJC6Z5GGC1Brib9PKiqQv8dRANYbp70=";
+        };
+        meta = {
+          description = "VsRocq is an extension for Visual Studio Code with support for the Rocq Prover";
+          downloadPage = "https://marketplace.visualstudio.com/items?itemName=rocq-prover.vsrocq";
+          homepage = "https://github.com/rocq-prover/vsrocq";
+          license = lib.licenses.mit;
+          maintainers = [ lib.maintainers.Zimmi48 ];
+        };
+      };
 
       roman.ayu-next = buildVscodeMarketplaceExtension {
         mktplcRef = {
@@ -4406,8 +4422,8 @@ let
         mktplcRef = {
           publisher = "streetsidesoftware";
           name = "code-spell-checker";
-          version = "4.3.0";
-          hash = "sha256-Wyy9DAHDYjMLf7bLG34yp7eNGY2k7IU10kmwhTw2vWA=";
+          version = "4.3.2";
+          hash = "sha256-Y0CyVIBJR8aEdogtTrL/a9fj7Nqk2vUhcGaE9K6HcRk=";
         };
         meta = {
           changelog = "https://marketplace.visualstudio.com/items/streetsidesoftware.code-spell-checker/changelog";
@@ -4520,8 +4536,8 @@ let
         mktplcRef = {
           name = "tabnine-vscode";
           publisher = "tabnine";
-          version = "3.324.0";
-          hash = "sha256-W1+TCXUmuTCb+IZZk3n6dyIDfVbMuU3jJUOsfrdjoXo=";
+          version = "3.326.0";
+          hash = "sha256-aPJiUfwfR9JFX3S8fFrSCV4MezGYVY4nqCF0t3Wevfc=";
         };
         meta = {
           license = lib.licenses.mit;
@@ -4815,8 +4831,8 @@ let
         mktplcRef = {
           name = "uiua-vscode";
           publisher = "uiua-lang";
-          version = "0.0.66";
-          hash = "sha256-eFdRzkoYJeQdpebKcSFhhnZZXFcA3oKURvqjBx5hReQ=";
+          version = "0.0.67";
+          hash = "sha256-Q/wJZ+ObCU+hRpZZKQGQtdt99/I6QHkSuHlNy7oe5Pk=";
         };
         meta = {
           description = "VSCode language extension for Uiua";
@@ -5080,8 +5096,8 @@ let
         mktplcRef = {
           name = "vscode-java-pack";
           publisher = "vscjava";
-          version = "0.30.4";
-          hash = "sha256-R7I1nLRkaQghlVs7eezzFbwTSiNSEJS2abIrMqv7654=";
+          version = "0.30.5";
+          hash = "sha256-MlBACPD880QvsQpPDXe5384dlrMeKMSX1CUSIfzwwPo=";
         };
         meta = {
           description = "Popular extensions for Java development that provides Java IntelliSense, debugging, testing, Maven/Gradle support, project management and more";
@@ -5318,8 +5334,8 @@ let
         mktplcRef = {
           name = "php-debug";
           publisher = "xdebug";
-          version = "1.37.0";
-          hash = "sha256-7Dz8i66tWPStk2fgFdZPY2Jz3j4IquJVyQbSnV+SVpk=";
+          version = "1.38.0";
+          hash = "sha256-QOA8At2akj9zLYxIuQJLkDL2Zg/isPIssFG/UipRBbU=";
         };
         meta = {
           description = "PHP Debug Adapter";

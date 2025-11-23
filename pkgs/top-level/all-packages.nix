@@ -9507,7 +9507,6 @@ with pkgs;
     ;
 
   inherit (postgresqlVersions)
-    postgresql_13
     postgresql_14
     postgresql_15
     postgresql_16
@@ -9516,7 +9515,6 @@ with pkgs;
     ;
 
   inherit (postgresqlJitVersions)
-    postgresql_13_jit
     postgresql_14_jit
     postgresql_15_jit
     postgresql_16_jit
@@ -9526,7 +9524,6 @@ with pkgs;
   postgresql = postgresql_17;
   postgresql_jit = postgresql_17_jit;
   postgresqlPackages = recurseIntoAttrs postgresql.pkgs;
-  postgresql13Packages = recurseIntoAttrs postgresql_13.pkgs;
   postgresql14Packages = recurseIntoAttrs postgresql_14.pkgs;
   postgresql15Packages = recurseIntoAttrs postgresql_15.pkgs;
   postgresql16Packages = recurseIntoAttrs postgresql_16.pkgs;
@@ -10720,12 +10717,6 @@ with pkgs;
   chuck = callPackage ../applications/audio/chuck {
     inherit (darwin) DarwinTools;
   };
-
-  clight = callPackage ../applications/misc/clight { };
-
-  clight-gui = libsForQt5.callPackage ../applications/misc/clight/clight-gui.nix { };
-
-  clightd = callPackage ../applications/misc/clight/clightd.nix { };
 
   clipgrab = libsForQt5.callPackage ../applications/video/clipgrab { };
 
@@ -12569,6 +12560,12 @@ with pkgs;
   vscodium = callPackage ../applications/editors/vscode/vscodium.nix { };
   vscodium-fhs = vscodium.fhs;
   vscodium-fhsWithPackages = vscodium.fhsWithPackages;
+
+  antigravity = callPackage ../by-name/an/antigravity/package.nix {
+    vscode-generic = ../applications/editors/vscode/generic.nix;
+  };
+  antigravity-fhs = antigravity.fhs;
+  antigravity-fhsWithPackages = antigravity.fhsWithPackages;
 
   code-cursor = callPackage ../by-name/co/code-cursor/package.nix {
     vscode-generic = ../applications/editors/vscode/generic.nix;
