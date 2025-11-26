@@ -9411,10 +9411,6 @@ with pkgs;
     libOnly = true;
   };
 
-  apulse = callPackage ../misc/apulse { };
-
-  libpressureaudio = callPackage ../misc/apulse/pressureaudio.nix { };
-
   tomcat-native = callPackage ../servers/http/tomcat/tomcat-native.nix { };
 
   libmysqlclient = libmysqlclient_3_3;
@@ -12162,8 +12158,6 @@ with pkgs;
     stdenv = stdenv_32bit;
   };
 
-  lightdm = libsForQt5.callPackage ../applications/display-managers/lightdm { };
-
   lightdm_qt = lightdm.override { withQt5 = true; };
 
   lightdm-gtk-greeter = callPackage ../applications/display-managers/lightdm/gtk-greeter.nix {
@@ -14098,8 +14092,10 @@ with pkgs;
   inherit (callPackages ../tools/package-management/nix-prefetch-scripts { })
     nix-prefetch-bzr
     nix-prefetch-cvs
+    nix-prefetch-darcs
     nix-prefetch-git
     nix-prefetch-hg
+    nix-prefetch-pijul
     nix-prefetch-svn
     nix-prefetch-scripts
     ;

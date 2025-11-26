@@ -348,6 +348,8 @@ self: super: with self; {
 
   aiohwenergy = callPackage ../development/python-modules/aiohwenergy { };
 
+  aioice = callPackage ../development/python-modules/aioice { };
+
   aioimaplib = callPackage ../development/python-modules/aioimaplib { };
 
   aioimmich = callPackage ../development/python-modules/aioimmich { };
@@ -457,6 +459,8 @@ self: super: with self; {
   aiormq = callPackage ../development/python-modules/aiormq { };
 
   aiorpcx = callPackage ../development/python-modules/aiorpcx { };
+
+  aiortc = callPackage ../development/python-modules/aiortc { };
 
   aiortm = callPackage ../development/python-modules/aiortm { };
 
@@ -663,8 +667,6 @@ self: super: with self; {
   amply = callPackage ../development/python-modules/amply { };
 
   amqp = callPackage ../development/python-modules/amqp { };
-
-  amqplib = callPackage ../development/python-modules/amqplib { };
 
   amqtt = callPackage ../development/python-modules/amqtt { };
 
@@ -2863,6 +2865,8 @@ self: super: with self; {
   colcon-argcomplete = callPackage ../development/python-modules/colcon-argcomplete { };
 
   colcon-cargo = callPackage ../development/python-modules/colcon-cargo { };
+
+  colcon-cd = callPackage ../development/python-modules/colcon-cd { };
 
   colcon-defaults = callPackage ../development/python-modules/colcon-defaults { };
 
@@ -5227,6 +5231,8 @@ self: super: with self; {
   fava = callPackage ../development/python-modules/fava { };
 
   fava-dashboards = callPackage ../development/python-modules/fava-dashboards { };
+
+  fava-investor = callPackage ../development/python-modules/fava-investor { };
 
   favicon = callPackage ../development/python-modules/favicon { };
 
@@ -8994,6 +9000,8 @@ self: super: with self; {
 
   luhn = callPackage ../development/python-modules/luhn { };
 
+  luma-core = callPackage ../development/python-modules/luma-core { };
+
   luna-soc = callPackage ../development/python-modules/luna-soc { };
 
   luna-usb = callPackage ../development/python-modules/luna-usb { };
@@ -9025,8 +9033,6 @@ self: super: with self; {
   lzallright = callPackage ../development/python-modules/lzallright { };
 
   lzfse = callPackage ../development/python-modules/lzfse { };
-
-  lzstring = callPackage ../development/python-modules/lzstring { };
 
   m2crypto = callPackage ../development/python-modules/m2crypto { };
 
@@ -13585,6 +13591,8 @@ self: super: with self; {
   pylibmc = callPackage ../development/python-modules/pylibmc { };
 
   pylibrespot-java = callPackage ../development/python-modules/pylibrespot-java { };
+
+  pylibsrtp = callPackage ../development/python-modules/pylibsrtp { };
 
   pylink-square = callPackage ../development/python-modules/pylink-square { };
 
@@ -18221,8 +18229,6 @@ self: super: with self; {
 
   sysrsync = callPackage ../development/python-modules/sysrsync { };
 
-  systembridge = callPackage ../development/python-modules/systembridge { };
-
   systembridgeconnector = callPackage ../development/python-modules/systembridgeconnector { };
 
   systembridgemodels = callPackage ../development/python-modules/systembridgemodels { };
@@ -19124,8 +19130,6 @@ self: super: with self; {
   tuyaha = callPackage ../development/python-modules/tuyaha { };
 
   tvdb-api = callPackage ../development/python-modules/tvdb-api { };
-
-  tweedledum = callPackage ../development/python-modules/tweedledum { };
 
   tweepy = callPackage ../development/python-modules/tweepy { };
 
