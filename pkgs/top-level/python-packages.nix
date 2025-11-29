@@ -780,6 +780,8 @@ self: super: with self; {
 
   apcaccess = callPackage ../development/python-modules/apcaccess { };
 
+  apeye = callPackage ../development/python-modules/apeye { };
+
   apeye-core = callPackage ../development/python-modules/apeye-core { };
 
   apipkg = callPackage ../development/python-modules/apipkg { };
@@ -1180,6 +1182,8 @@ self: super: with self; {
 
   autocommand = callPackage ../development/python-modules/autocommand { };
 
+  autodocsumm = callPackage ../development/python-modules/autodocsumm { };
+
   autofaiss = callPackage ../development/python-modules/autofaiss { };
 
   autoflake = callPackage ../development/python-modules/autoflake { };
@@ -1289,9 +1293,13 @@ self: super: with self; {
 
   ayla-iot-unofficial = callPackage ../development/python-modules/ayla-iot-unofficial { };
 
+  azure-ai-agents = callPackage ../development/python-modules/azure-ai-agents { };
+
   azure-ai-documentintelligence =
     callPackage ../development/python-modules/azure-ai-documentintelligence
       { };
+
+  azure-ai-projects = callPackage ../development/python-modules/azure-ai-projects { };
 
   azure-ai-vision-imageanalysis =
     callPackage ../development/python-modules/azure-ai-vision-imageanalysis
@@ -1771,8 +1779,6 @@ self: super: with self; {
   bashlex = callPackage ../development/python-modules/bashlex { };
 
   basiciw = callPackage ../development/python-modules/basiciw { };
-
-  basswood-av = callPackage ../development/python-modules/basswood-av { };
 
   batchgenerators = callPackage ../development/python-modules/batchgenerators { };
 
@@ -2868,13 +2874,19 @@ self: super: with self; {
 
   colcon-cd = callPackage ../development/python-modules/colcon-cd { };
 
+  colcon-coveragepy-result = callPackage ../development/python-modules/colcon-coveragepy-result { };
+
   colcon-defaults = callPackage ../development/python-modules/colcon-defaults { };
+
+  colcon-devtools = callPackage ../development/python-modules/colcon-devtools { };
 
   colcon-installed-package-information =
     callPackage ../development/python-modules/colcon-installed-package-information
       { };
 
   colcon-library-path = callPackage ../development/python-modules/colcon-library-path { };
+
+  colcon-metadata = callPackage ../development/python-modules/colcon-metadata { };
 
   colcon-mixin = callPackage ../development/python-modules/colcon-mixin { };
 
@@ -2886,13 +2898,19 @@ self: super: with self; {
     callPackage ../development/python-modules/colcon-package-information
       { };
 
+  colcon-package-selection = callPackage ../development/python-modules/colcon-package-selection { };
+
   colcon-parallel-executor = callPackage ../development/python-modules/colcon-parallel-executor { };
+
+  colcon-python-setup-py = callPackage ../development/python-modules/colcon-python-setup-py { };
 
   colcon-recursive-crawl = callPackage ../development/python-modules/colcon-recursive-crawl { };
 
   colcon-ros-domain-id-coordinator =
     callPackage ../development/python-modules/colcon-ros-domain-id-coordinator
       { };
+
+  colcon-zsh = callPackage ../development/python-modules/colcon-zsh { };
 
   collections-extended = callPackage ../development/python-modules/collections-extended { };
 
@@ -3749,6 +3767,8 @@ self: super: with self; {
 
   dicomweb-client = callPackage ../development/python-modules/dicomweb-client { };
 
+  dict2css = callPackage ../development/python-modules/dict2css { };
+
   dict2xml = callPackage ../development/python-modules/dict2xml { };
 
   dictdiffer = callPackage ../development/python-modules/dictdiffer { };
@@ -3948,6 +3968,8 @@ self: super: with self; {
   django-bootstrap5 = callPackage ../development/python-modules/django-bootstrap5 { };
 
   django-cachalot = callPackage ../development/python-modules/django-cachalot { };
+
+  django-cache-memoize = callPackage ../development/python-modules/django-cache-memoize { };
 
   django-cache-url = callPackage ../development/python-modules/django-cache-url { };
 
@@ -4541,6 +4563,8 @@ self: super: with self; {
   ds-analysis-lib = callPackage ../development/python-modules/ds-analysis-lib { };
 
   ds-reporting-lib = callPackage ../development/python-modules/ds-reporting-lib { };
+
+  ds-server-lib = callPackage ../development/python-modules/ds-server-lib { };
 
   ds-store = callPackage ../development/python-modules/ds-store { };
 
@@ -5218,6 +5242,8 @@ self: super: with self; {
   fasttext = callPackage ../development/python-modules/fasttext { };
 
   fasttext-predict = callPackage ../development/python-modules/fasttext-predict { };
+
+  fastuuid = callPackage ../development/python-modules/fastuuid { };
 
   fatrop = toPythonModule (
     pkgs.fatrop.override {
@@ -8214,6 +8240,8 @@ self: super: with self; {
 
   lazy-object-proxy = callPackage ../development/python-modules/lazy-object-proxy { };
 
+  lb-matching-tools = callPackage ../development/python-modules/lb-matching-tools { };
+
   lc7001 = callPackage ../development/python-modules/lc7001 { };
 
   lcd-i2c = callPackage ../development/python-modules/lcd-i2c { };
@@ -8393,6 +8421,8 @@ self: super: with self; {
   libknot = callPackage ../development/python-modules/libknot { };
 
   liblarch = callPackage ../development/python-modules/liblarch { };
+
+  liblistenbrainz = callPackage ../development/python-modules/liblistenbrainz { };
 
   liblp = callPackage ../development/python-modules/liblp { };
 
@@ -11993,8 +12023,6 @@ self: super: with self; {
     inherit (pkgs.xorg) libxcb;
   };
 
-  pillow-avif-plugin = callPackage ../development/python-modules/pillow-avif-plugin { };
-
   pillow-heif = callPackage ../development/python-modules/pillow-heif { };
 
   pillow-jpls = callPackage ../development/python-modules/pillow-jpls { };
@@ -12167,6 +12195,8 @@ self: super: with self; {
   plum-py = callPackage ../development/python-modules/plum-py { };
 
   plumbum = callPackage ../development/python-modules/plumbum { };
+
+  pluralizer = callPackage ../development/python-modules/pluralizer { };
 
   pluthon = callPackage ../development/python-modules/pluthon { };
 
@@ -12456,6 +12486,8 @@ self: super: with self; {
   protonup-ng = callPackage ../development/python-modules/protonup-ng { };
 
   prov = callPackage ../development/python-modules/prov { };
+
+  prowlpy = callPackage ../development/python-modules/prowlpy { };
 
   prox-tv = callPackage ../development/python-modules/prox-tv { };
 
@@ -13389,6 +13421,8 @@ self: super: with self; {
   pyheos = callPackage ../development/python-modules/pyheos { };
 
   pyhepmc = callPackage ../development/python-modules/pyhepmc { };
+
+  pyhibp = callPackage ../development/python-modules/pyhibp { };
 
   pyhidra = callPackage ../development/python-modules/pyhidra { };
 
@@ -16166,6 +16200,10 @@ self: super: with self; {
 
   requests-hawk = callPackage ../development/python-modules/requests-hawk { };
 
+  requests-http-message-signatures =
+    callPackage ../development/python-modules/requests-http-message-signatures
+      { };
+
   requests-http-signature = callPackage ../development/python-modules/requests-http-signature { };
 
   requests-kerberos = callPackage ../development/python-modules/requests-kerberos { };
@@ -17551,6 +17589,8 @@ self: super: with self; {
 
   sphinx-jinja = callPackage ../development/python-modules/sphinx-jinja { };
 
+  sphinx-jinja2-compat = callPackage ../development/python-modules/sphinx-jinja2-compat { };
+
   sphinx-jupyterbook-latex = callPackage ../development/python-modules/sphinx-jupyterbook-latex { };
 
   sphinx-last-updated-by-git =
@@ -17601,6 +17641,8 @@ self: super: with self; {
 
   sphinx-togglebutton = callPackage ../development/python-modules/sphinx-togglebutton { };
 
+  sphinx-toolbox = callPackage ../development/python-modules/sphinx-toolbox { };
+
   sphinx-version-warning = callPackage ../development/python-modules/sphinx-version-warning { };
 
   sphinx-versions = callPackage ../development/python-modules/sphinx-versions { };
@@ -17648,6 +17690,8 @@ self: super: with self; {
   sphinxcontrib-katex = callPackage ../development/python-modules/sphinxcontrib-katex { };
 
   sphinxcontrib-log-cabinet = callPackage ../development/python-modules/sphinxcontrib-log-cabinet { };
+
+  sphinxcontrib-mermaid = callPackage ../development/python-modules/sphinxcontrib-mermaid { };
 
   sphinxcontrib-moderncmakedomain =
     callPackage ../development/python-modules/sphinxcontrib-moderncmakedomain
@@ -19063,6 +19107,8 @@ self: super: with self; {
     }
   );
 
+  troi = callPackage ../development/python-modules/troi { };
+
   troposphere = callPackage ../development/python-modules/troposphere { };
 
   trove-classifiers = callPackage ../development/python-modules/trove-classifiers { };
@@ -19652,6 +19698,10 @@ self: super: with self; {
   types-webencodings = callPackage ../development/python-modules/types-webencodings { };
 
   types-xxhash = callPackage ../development/python-modules/types-xxhash { };
+
+  typesense = callPackage ../development/python-modules/typesense {
+    inherit (pkgs) typesense curl;
+  };
 
   typesentry = callPackage ../development/python-modules/typesentry { };
 
@@ -20351,8 +20401,6 @@ self: super: with self; {
   wfuzz = callPackage ../development/python-modules/wfuzz { };
 
   wget = callPackage ../development/python-modules/wget { };
-
-  wgnlpy = callPackage ../development/python-modules/wgnlpy { };
 
   wgpu-py = callPackage ../development/python-modules/wgpu-py { };
 

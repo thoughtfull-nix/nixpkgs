@@ -74,6 +74,7 @@ mapAliases {
   autotrash = throw "'autotrash' has been renamed to/replaced by 'super.pkgs.autotrash'"; # Converted to throw 2025-10-29
   Babel = throw "'Babel' has been renamed to/replaced by 'babel'"; # Converted to throw 2025-10-29
   backports_shutil_get_terminal_size = throw "'backports_shutil_get_terminal_size' has been renamed to/replaced by 'backports-shutil-get-terminal-size'"; # Converted to throw 2025-10-29
+  basewood-av = throw "'basewood-av' has been removed due to being archived upstream and unused"; # added 2025-11-26
   bash_kernel = throw "'bash_kernel' has been renamed to/replaced by 'bash-kernel'"; # Converted to throw 2025-10-29
   beancount_docverif = throw "'beancount_docverif' has been renamed to/replaced by 'beancount-docverif'"; # Converted to throw 2025-10-29
   beets-stable = lib.warn "beets-stable was aliased to beets, since upstream releases are frequent nowadays" self.beets; # added 2025-10-16
@@ -298,6 +299,7 @@ mapAliases {
   pdfminer = throw "'pdfminer' has been renamed to/replaced by 'pdfminer-six'"; # Converted to throw 2025-10-29
   pep257 = throw "'pep257' has been renamed to/replaced by 'pydocstyle'"; # Converted to throw 2025-10-29
   percol = throw "percol has been removed because it hasn't been updated since 2019"; # added 2025-05-25
+  pillow-avif-plugin = throw "'pillow-avif-plugin' has been removed because 'pillow' has native avif support since 11.3"; # added 2025-11-26
   plumlightpad = throw "plumlightpad has been removed because the API was shut down"; # added 2025-11-04
   Polygon3 = throw "'Polygon3' has been renamed to/replaced by 'polygon3'"; # Converted to throw 2025-10-29
   posix_ipc = throw "'posix_ipc' has been renamed to/replaced by 'posix-ipc'"; # Converted to throw 2025-10-29
@@ -489,6 +491,7 @@ mapAliases {
   Wand = throw "'Wand' has been renamed to/replaced by 'wand'"; # Converted to throw 2025-10-29
   WazeRouteCalculator = throw "'WazeRouteCalculator' has been renamed to/replaced by 'wazeroutecalculator'"; # Converted to throw 2025-10-29
   websocket_client = throw "'websocket_client' has been renamed to/replaced by 'websocket-client'"; # Converted to throw 2025-10-29
+  wgnlpy = throw "'wgnlpy' has been removed, as the upstream repository was unmaintained for several years"; # Converted to throw 2025-11-24
   worldengine = throw "worldengine has been removed because it has been marked as broken since at least November 2024."; # Added 2025-10-04
   WSME = throw "'WSME' has been renamed to/replaced by 'wsme'"; # Converted to throw 2025-10-29
   wxPython_4_2 = throw "'wxPython_4_2' has been renamed to/replaced by 'wxpython'"; # Converted to throw 2025-10-29
