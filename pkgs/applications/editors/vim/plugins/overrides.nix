@@ -127,6 +127,7 @@
   sad,
   # tv.nvim dependency
   television,
+  tree-sitter,
 }:
 self: super:
 let
@@ -877,8 +878,8 @@ assertNoAdditions {
   copilot-vim = super.copilot-vim.overrideAttrs (old: {
     postInstall = ''
       substituteInPlace $out/autoload/copilot/client.vim \
-        --replace-fail "  let node = get(g:, 'copilot_node_command', ''\'''\')" \
-                  "  let node = get(g:, 'copilot_node_command', '${nodejs}/bin/node')"
+        --replace-fail "let node = s:GetCommand('copilot_node_command', ['node'])" \
+                       "let node = s:GetCommand('copilot_node_command', ['${nodejs}/bin/node'])"
     '';
 
     meta = old.meta // {
@@ -1558,21 +1559,34 @@ assertNoAdditions {
     ];
   };
 
-  kulala-nvim = super.kulala-nvim.overrideAttrs {
-    dependencies = with self; [
-      nvim-treesitter
-      nvim-treesitter-parsers.http
-    ];
-    buildInputs = [ curl ];
-    postPatch = ''
-      substituteInPlace lua/kulala/config/defaults.lua \
-        --replace-fail 'curl_path = "curl"' 'curl_path = "${lib.getExe curl}"'
-    '';
-    nvimSkipModules = [
-      # Requires some extra work to get CLI working in nixpkgs
-      "cli.kulala_cli"
-    ];
-  };
+  kulala-nvim = super.kulala-nvim.overrideAttrs (
+    old:
+    let
+      kulala-http-grammar = neovimUtils.grammarToPlugin (
+        tree-sitter.buildGrammar {
+          inherit (old) version src meta;
+          language = "kulala_http";
+          location = "lua/tree-sitter";
+          generate = false;
+        }
+      );
+    in
+    {
+      dependencies = [ kulala-http-grammar ];
+      buildInputs = [ curl ];
+
+      patches = [ ./patches/kulala-nvim/do-not-install-grammar.patch ];
+      postPatch = ''
+        substituteInPlace lua/kulala/config/defaults.lua \
+          --replace-fail 'curl_path = "curl"' 'curl_path = "${lib.getExe curl}"'
+      '';
+
+      nvimSkipModules = [
+        # Requires some extra work to get CLI working in nixpkgs
+        "cli.kulala_cli"
+      ];
+    }
+  );
 
   lazydocker-nvim = super.lazydocker-nvim.overrideAttrs {
     runtimeDeps = [
