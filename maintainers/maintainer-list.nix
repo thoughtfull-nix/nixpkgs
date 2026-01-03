@@ -10954,6 +10954,13 @@
     githubId = 1550265;
     name = "Dominic Steinitz";
   };
+  iedame = {
+    name = "Rafael Ieda";
+    github = "iedame";
+    githubId = 60272;
+    email = "git@ieda.me";
+    matrix = "@ieda:matrix.org";
+  };
   if-loop69420 = {
     github = "if-loop69420";
     githubId = 81078181;
@@ -16743,6 +16750,11 @@
     github = "meain";
     githubId = 14259816;
     name = "Abin Simon";
+  };
+  meanwhile131 = {
+    name = "meanwhile131";
+    github = "meanwhile131";
+    githubId = 51206659;
   };
   meatcar = {
     email = "nixpkgs@denys.me";
