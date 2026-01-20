@@ -1321,6 +1321,12 @@
     githubId = 8614547;
     name = "Ali Caglayan";
   };
+  aljazerzen = {
+    email = "aljaz@erzen.si";
+    github = "aljazerzen";
+    githubId = 11072061;
+    name = "Aljaž Mur Eržen";
+  };
   alkasm = {
     email = "alexreynolds00@gmail.com";
     github = "alkasm";
@@ -28910,7 +28916,7 @@
     githubId = 102890144;
   };
   yiyu = {
-    email = "yiyuzhou19@gmail.com";
+    email = "yiyu@yiyuzhou.io";
     name = "Yiyu Zhou";
     github = "yzhou216";
     githubId = 50000936;
