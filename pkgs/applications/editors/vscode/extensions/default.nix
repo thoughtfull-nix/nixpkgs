@@ -968,8 +968,8 @@ let
         mktplcRef = {
           name = "chatgpt-reborn";
           publisher = "chris-hayes";
-          version = "3.27.0";
-          sha256 = "sha256-52SvGb9TsvDQey5cjw+ZIQBP/1dyWcHKNjqCCCyM6k4=";
+          version = "3.28.0";
+          sha256 = "sha256-YOaOBDGoLg/bWB/Yw6CCbJ/J7s6qA8QlbM3wiknCTGQ=";
         };
       };
 
@@ -1268,8 +1268,8 @@ let
         mktplcRef = {
           publisher = "denoland";
           name = "vscode-deno";
-          version = "3.47.0";
-          hash = "sha256-T8RJi2SiFf6rMTpDQx9VuBv0zNwvusZrwybHeFe5/KQ=";
+          version = "3.48.0";
+          hash = "sha256-AWnX4toFJnIhflc039fN31lrrTaKKXUSrePanWoZnJI=";
         };
         meta = {
           changelog = "https://marketplace.visualstudio.com/items/denoland.vscode-deno/changelog";
@@ -1711,8 +1711,8 @@ let
         mktplcRef = {
           name = "vscode-jest-runner";
           publisher = "firsttris";
-          version = "0.4.84";
-          hash = "sha256-x4CaSa/CRZgs7vGthFcn8UXYrbQhQXkULPBbGnj3zpw=";
+          version = "0.4.86";
+          hash = "sha256-QLa8+WAghGJlToGCx7/R68D0GRgCbA0jkEtlA5EnEGA=";
         };
         meta = {
           description = "Simple way to run or debug a single (or multiple) tests from context-menu";
@@ -2611,8 +2611,8 @@ let
         mktplcRef = {
           name = "language-julia";
           publisher = "julialang";
-          version = "1.171.2";
-          hash = "sha256-XELIrqcyd6DEpJjbSlE17noiYa8CZvDwnodA1QALewM=";
+          version = "1.174.2";
+          hash = "sha256-nlMuWnJOtUlCB9RGWUngB8KgIiNxoQTHkjI6ZtO/Gjs=";
         };
         meta = {
           changelog = "https://marketplace.visualstudio.com/items/julialang.language-julia/changelog";
@@ -2982,8 +2982,8 @@ let
         mktplcRef = {
           name = "rainbow-csv";
           publisher = "mechatroner";
-          version = "3.23.0";
-          hash = "sha256-HEbx7vjuVFjAG0koFI/JRehivRiLBF0cgx24LhdwCBc=";
+          version = "3.24.0";
+          hash = "sha256-g9xY6JDx8RZyl4KFgIAVvQKydbwcEHLaUJPinUR89zM=";
         };
         meta = {
           changelog = "https://marketplace.visualstudio.com/items/mechatroner.rainbow-csv/changelog";
@@ -4469,8 +4469,8 @@ let
         mktplcRef = {
           name = "vscode-stylelint";
           publisher = "stylelint";
-          version = "1.6.0";
-          hash = "sha256-t0zS4+UZePViqkGgVezy/2CyyqilUKb6byTYukbxqr8=";
+          version = "2.0.1";
+          hash = "sha256-TYUDm+i7Chuybbx91AUxH/oIyZYWpZ5XnYxjhjXGP88=";
         };
         meta = {
           description = "Official Stylelint extension for Visual Studio Code";
@@ -4765,8 +4765,8 @@ let
         mktplcRef = {
           name = "opa";
           publisher = "tsandall";
-          version = "0.20.0";
-          hash = "sha256-1o7v9lncnmYWr9FPEjQmamfNW/Lui9A0V+l7bCjn/hw=";
+          version = "0.21.0";
+          hash = "sha256-1k+yq8QYTpiePX4Q8o+iUmpqcWONCOZkMrNZjp2Rlss=";
         };
         meta = {
           changelog = "https://github.com/open-policy-agent/vscode-opa/blob/master/CHANGELOG.md";

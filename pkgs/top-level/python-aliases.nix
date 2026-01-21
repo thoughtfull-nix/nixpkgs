@@ -62,6 +62,7 @@ mapAliases {
   amazon-kclpy = throw "amazon-kclpy has been removed because it has been marked as broken since at least November 2024."; # Added 2025-10-03
   amazon_kclpy = throw "'amazon_kclpy' has been renamed to/replaced by 'amazon-kclpy'"; # Converted to throw 2025-10-29
   amqplib = throw "amqplib has been removed as it was unmaintained upstream"; # Added 2025-11-22
+  ansiconv = throw "ansiconv has been removed because it was archived upstream"; # Added 2026-01-14
   ansiwrap = throw "ansiwrap has been removed because it has been marked as broken since at least November 2024."; # Added 2025-10-03
   apkit = throw "apkit was removed because it is unmaintained upstream and different from apkit on PyPI"; # added 2025-09-13
   APScheduler = throw "'APScheduler' has been renamed to/replaced by 'apscheduler'"; # Converted to throw 2025-10-29
@@ -119,6 +120,7 @@ mapAliases {
   django-crispy-bootstrap5 = crispy-bootstrap5; # added 2025-06-11
   django_3 = throw "Django 3 has reached it's EOL in 2024-04 and has therefore been removed."; # added 2025-01-25
   django_5_1 = throw "Django 5.1 has reached it's EOL in 2025-12 and has therefore been removed."; # added 2025-11-30"
+  django_5_2 = django_5; # added 2026-01-18
   django_appconf = throw "'django_appconf' has been renamed to/replaced by 'django-appconf'"; # Converted to throw 2025-10-29
   django_classytags = throw "'django_classytags' has been renamed to/replaced by 'django-classy-tags'"; # Converted to throw 2025-10-29
   django_colorful = throw "'django_colorful' has been renamed to/replaced by 'django-colorful'"; # Converted to throw 2025-10-29
@@ -275,6 +277,8 @@ mapAliases {
   mkdocs-macros = mkdocs-macros-plugin; # added 2025-09-02
   mkdocs-minify = throw "'mkdocs-minify' has been renamed to/replaced by 'mkdocs-minify-plugin'"; # Converted to throw 2025-10-29
   mne-python = throw "'mne-python' has been renamed to/replaced by 'mne'"; # Converted to throw 2025-10-29
+  modeled = "'modeled' has been removed because it is unmaintained"; # Added 2026-01-19
+  moretools = "'moretools' has been removed because it is unmaintained"; # Added 2026-01-19
   mpris-server = throw "mpris-server was removed because it is unused"; # added 2025-10-31
   msldap-bad = throw "'msldap-bad' has been renamed to/replaced by 'badldap'"; # added 2025-11-06
   mullvad-closest = throw "'mullvad-closest' has been removed as it was unmaintained. Consider using 'mullvad-compass' instead."; # Added 2026-01-13
@@ -351,7 +355,6 @@ mapAliases {
   pylit = throw "'pylit' has been removed as it was broken and unmaintained upstream"; # Added 2025-11-29
   pymc3 = throw "'pymc3' has been renamed to/replaced by 'pymc'"; # Converted to throw 2025-10-29
   pymelcloud = throw "'pymelcloud' has been renamed to/replaced by 'python-melcloud'"; # Converted to throw 2025-10-29
-  pymicro-vad = throw "'pymicro-vad' was removed because Home Assistant switched to 'pysilero-vad'"; # added 2026-01-08
   PyMVGLive = throw "'PyMVGLive' has been renamed to/replaced by 'pymvglive'"; # Converted to throw 2025-10-29
   pymyq = throw "'pymyq' has been renamed to/replaced by 'python-myq'"; # Converted to throw 2025-10-29
   pyobject = throw "'pyobject' has been removed because it was only supporting python 2"; # Added 2026-01-24
@@ -440,6 +443,7 @@ mapAliases {
   retry_decorator = throw "'retry_decorator' has been renamed to/replaced by 'retry-decorator'"; # Converted to throw 2025-10-29
   retworkx = throw "'retworkx' has been renamed to/replaced by 'rustworkx'"; # Converted to throw 2025-10-29
   rki-covid-parser = throw "rki-covid-parser has been removed because it is unmaintained and broken"; # added 2025-09-20
+  robotframework-tools = "'robotframework-tools' has been removed because it is unmaintained"; # Added 2026-01-19
   ROPGadget = throw "'ROPGadget' has been renamed to/replaced by 'ropgadget'"; # Converted to throw 2025-10-29
   rtslib = throw "'rtslib' has been renamed to/replaced by 'rtslib-fb'"; # Converted to throw 2025-10-29
   rtsp-to-webrtc = throw "rtsp-to-webrtc has been removed because it is unmaintained"; # added 2025-09-20
@@ -450,6 +454,7 @@ mapAliases {
   schemainspect = throw "schemainspect has been removed because it has transitively been marked broken since May 2024, and is unmaintained upstream."; # Added 2025-10-11
   scikitimage = throw "'scikitimage' has been renamed to/replaced by 'scikit-image'"; # Converted to throw 2025-10-29
   scikitlearn = throw "'scikitlearn' has been renamed to/replaced by 'scikit-learn'"; # Converted to throw 2025-10-29
+  scrapy-fake-useragent = throw "scrapy-fake-useragent has been removed because it is incompatible with scrapy >= 2.14"; # Added 2026-01-14
   seaserv = throw "seaserv has been removed as it is unmaintained"; # Added 2025-08-21
   sentry-sdk_2 = throw "'sentry-sdk_2' has been renamed to/replaced by 'sentry-sdk'"; # Converted to throw 2025-10-29
   setuptools_dso = throw "'setuptools_dso' has been renamed to/replaced by 'setuptools-dso'"; # Converted to throw 2025-10-29
@@ -532,6 +537,7 @@ mapAliases {
   z3 = throw "'z3' has been renamed to/replaced by 'z3-solver'"; # Converted to throw 2025-10-29
   zc-buildout221 = throw "'zc-buildout221' has been renamed to/replaced by 'zc-buildout'"; # Converted to throw 2025-10-29
   zc_lockfile = throw "'zc_lockfile' has been renamed to/replaced by 'zc-lockfile'"; # Converted to throw 2025-10-29
+  zetup = "'zetup' has been removed because it is unmaintained"; # Added 2026-01-19
   zope_component = throw "'zope_component' has been renamed to/replaced by 'zope-component'"; # Converted to throw 2025-10-29
   zope_configuration = throw "'zope_configuration' has been renamed to/replaced by 'zope-configuration'"; # Converted to throw 2025-10-29
   zope_contenttype = throw "'zope_contenttype' has been renamed to/replaced by 'zope-contenttype'"; # Converted to throw 2025-10-29

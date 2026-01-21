@@ -521,7 +521,9 @@ let
 
         easy-format = callPackage ../development/ocaml-modules/easy-format { };
 
-        eigen = callPackage ../development/ocaml-modules/eigen { };
+        eigen = callPackage ../development/ocaml-modules/eigen {
+          stdenv = pkgs.gcc14Stdenv;
+        };
 
         eio = callPackage ../development/ocaml-modules/eio { };
         eio_linux = callPackage ../development/ocaml-modules/eio/linux.nix { };
@@ -785,6 +787,10 @@ let
         happy-eyeballs = callPackage ../development/ocaml-modules/happy-eyeballs { };
 
         happy-eyeballs-lwt = callPackage ../development/ocaml-modules/happy-eyeballs/lwt.nix { };
+
+        happy-eyeballs-miou-unix =
+          callPackage ../development/ocaml-modules/happy-eyeballs/miou-unix.nix
+            { };
 
         happy-eyeballs-mirage = callPackage ../development/ocaml-modules/happy-eyeballs/mirage.nix { };
 
@@ -2089,6 +2095,8 @@ let
         tls-eio = callPackage ../development/ocaml-modules/tls/eio.nix { };
 
         tls-lwt = callPackage ../development/ocaml-modules/tls/lwt.nix { };
+
+        tls-miou-unix = callPackage ../development/ocaml-modules/tls/miou-unix.nix { };
 
         tls-mirage = callPackage ../development/ocaml-modules/tls/mirage.nix { };
 
