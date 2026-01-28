@@ -237,6 +237,7 @@
   ./programs/htop.nix
   ./programs/i3lock.nix
   ./programs/iay.nix
+  ./programs/idescriptor.nix
   ./programs/iftop.nix
   ./programs/iio-hyprland.nix
   ./programs/immersed.nix
@@ -611,6 +612,7 @@
   ./services/display-managers/default.nix
   ./services/display-managers/dms-greeter.nix
   ./services/display-managers/gdm.nix
+  ./services/display-managers/generic.nix
   ./services/display-managers/greetd.nix
   ./services/display-managers/lemurs.nix
   ./services/display-managers/ly.nix
@@ -1555,6 +1557,7 @@
   ./services/torrent/peerflix.nix
   ./services/torrent/qbittorrent.nix
   ./services/torrent/qui.nix
+  ./services/torrent/rqbit.nix
   ./services/torrent/rtorrent.nix
   ./services/torrent/torrentstream.nix
   ./services/torrent/transmission.nix
