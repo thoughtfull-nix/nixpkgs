@@ -8604,6 +8604,13 @@
     githubId = 52276064;
     name = "figboy9";
   };
+  figsoda = {
+    email = "figsoda@pm.me";
+    matrix = "@figsoda:matrix.org";
+    github = "figsoda";
+    githubId = 40620903;
+    name = "figsoda";
+  };
   fionera = {
     email = "nix@fionera.de";
     github = "fionera";
@@ -19548,6 +19555,12 @@
     githubId = 14004859;
     name = "Ole Mussmann";
   };
+  olillin = {
+    email = "oli@olillin.com";
+    github = "olillin";
+    githubId = 55047947;
+    name = "Oli";
+  };
   oliver-koss = {
     email = "oliver.koss06@gmail.com";
     github = "oliver-koss";
@@ -24355,6 +24368,12 @@
     email = "dawkins.chris.dev@gmail.com";
     github = "siph";
     githubId = 6619112;
+  };
+  siphc = {
+    name = "siphc";
+    github = "siphc";
+    githubId = 42943030;
+    email = "ayfpan@ucla.edu";
   };
   sir4ur0n = {
     github = "sir4ur0n";

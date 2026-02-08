@@ -19,15 +19,15 @@ let
   ];
 in
 buildDotnetModule rec {
-  pname = "ArchiSteamFarm";
+  pname = "archisteamfarm";
   # nixpkgs-update: no auto update
-  version = "6.3.1.4";
+  version = "6.3.1.6";
 
   src = fetchFromGitHub {
     owner = "JustArchiNET";
     repo = "ArchiSteamFarm";
     rev = version;
-    hash = "sha256-o95wYtSXLsBSMAPhVQeLBtgPqae/KihOR35QNRMXMjY=";
+    hash = "sha256-WbzPlngp+Vjwc14qgQE5i2WVRCGvcs9N8lVv2SpfqdQ=";
   };
 
   dotnet-runtime = dotnetCorePackages.aspnetcore_10_0;
@@ -42,6 +42,7 @@ buildDotnetModule rec {
   testProjectFile = "ArchiSteamFarm.Tests";
 
   executable = "ArchiSteamFarm";
+  installPath = "${placeholder "out"}/lib/ArchiSteamFarm";
 
   enableParallelBuilding = false;
 
@@ -95,7 +96,7 @@ buildDotnetModule rec {
   '';
 
   passthru = {
-    # nix-shell maintainers/scripts/update.nix --argstr package ArchiSteamFarm
+    # nix-shell maintainers/scripts/update.nix --argstr package archisteamfarm
     updateScript = ./update.sh;
     ui = callPackage ./web-ui { };
   };
