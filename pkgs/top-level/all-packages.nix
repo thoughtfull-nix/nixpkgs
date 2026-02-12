@@ -664,6 +664,10 @@ with pkgs;
 
   fetchFromGitea = callPackage ../build-support/fetchgitea { };
 
+  fetchFromForgejo = fetchFromGitea;
+
+  fetchFromCodeberg = callPackage ../build-support/fetchcodeberg { };
+
   fetchFromGitHub = callPackage ../build-support/fetchgithub { };
 
   fetchFromBitbucket = callPackage ../build-support/fetchbitbucket { };
@@ -14266,6 +14270,10 @@ with pkgs;
           waylandFull
           yabridge
           fonts
+          stable_11
+          stableFull_11
+          staging_11
+          stagingFull_11
           ;
       }
     );
