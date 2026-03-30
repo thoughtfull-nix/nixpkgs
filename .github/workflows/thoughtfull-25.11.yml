@@ -25,7 +25,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        if: env.run_steps == 'true'
         uses: thoughtfull-systems/checkout-then-configure@main
         with:
           ref: nixos-25.11
@@ -34,19 +33,15 @@ jobs:
           # write permission which is not possible with the default Github token
           token: ${{secrets.PAT}}
       - name: Add upstream remote
-        if: env.run_steps == 'true'
         run: |
           git remote add -t nixos-25.11 --no-tags -f upstream "https://github.com/nixos/nixpkgs.git"
       - name: Merge from upstream
-        if: env.run_steps == 'true'
         run: |
           git merge --no-ff upstream/nixos-25.11
       - name: Merge thoughtfull branches
-        if: env.run_steps == 'true'
         run: |
           git merge --no-ff origin/workflows
           git merge --no-ff origin/initrd-dhcp-background
       - name: Push to origin
-        if: env.run_steps == 'true'
         run: |
           git push origin nixos-25.11
