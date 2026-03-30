@@ -9,16 +9,16 @@
 
 buildGoModule (finalAttrs: {
   pname = "spacectl";
-  version = "1.18.4";
+  version = "1.20.1";
 
   src = fetchFromGitHub {
     owner = "spacelift-io";
     repo = "spacectl";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-9CsC9xkMz8BfIegahQ1cpSODqL1yl10Lncn8RdceWcU=";
+    hash = "sha256-/eetv0AS5fdeYRoOEWhKL31Nud18w3rdx33ce/70SYs=";
   };
 
-  vendorHash = "sha256-f/09XZiaYNUZzKM0jITFdUmKt8UQy90K4PGhC6ZupCk=";
+  vendorHash = "sha256-d3GO1P2miqDLlnonjGl+OSy+AQbQIIBfEw4Nkroqnrc=";
 
   nativeBuildInputs = [ installShellFiles ];
 

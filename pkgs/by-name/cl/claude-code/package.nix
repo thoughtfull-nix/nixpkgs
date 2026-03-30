@@ -15,14 +15,14 @@
 }:
 buildNpmPackage (finalAttrs: {
   pname = "claude-code";
-  version = "2.1.66";
+  version = "2.1.86";
 
   src = fetchzip {
     url = "https://registry.npmjs.org/@anthropic-ai/claude-code/-/claude-code-${finalAttrs.version}.tgz";
-    hash = "sha256-bZDWmtYUKL6Yrkuz70B4CgJLGn63W68G1MQa5ggivbg=";
+    hash = "sha256-Bo2Uj0doMbOK0H8nSzRvwWTcVYsQuP2E9KCauqISzQk=";
   };
 
-  npmDepsHash = "sha256-brrbatyYO2PH4EbduuEkknql4W0MQCMMKL1LvAQnx2s=";
+  npmDepsHash = "sha256-/DITdMUtHiBQXjerNB8Pom6OaM0LpE6pWbD8njPfVqw=";
 
   strictDeps = true;
 
@@ -44,6 +44,7 @@ buildNpmPackage (finalAttrs: {
   postInstall = ''
     wrapProgram $out/bin/claude \
       --set DISABLE_AUTOUPDATER 1 \
+      --set-default FORCE_AUTOUPDATE_PLUGINS 1 \
       --set DISABLE_INSTALLATION_CHECKS 1 \
       --unset DEV \
       --prefix PATH : ${

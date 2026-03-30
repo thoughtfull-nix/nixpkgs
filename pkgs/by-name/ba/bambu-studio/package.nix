@@ -36,13 +36,13 @@
   systemd,
   onetbb,
   webkitgtk_4_1,
-  wxGTK31,
+  wxwidgets_3_1,
   libx11,
   withSystemd ? stdenv.hostPlatform.isLinux,
 }:
 let
   wxGTK' =
-    (wxGTK31.override {
+    (wxwidgets_3_1.override {
       withCurl = true;
       withPrivateFonts = true;
       withWebKit = true;
@@ -196,6 +196,7 @@ stdenv.mkDerivation (finalAttrs: {
     maintainers = with lib.maintainers; [
       zhaofengli
       dsluijk
+      miniharinn
     ];
     mainProgram = "bambu-studio";
     platforms = lib.platforms.linux;

@@ -11,14 +11,14 @@
 
 python3Packages.buildPythonApplication {
   pname = "lichess-bot";
-  version = "2026.2.13.1";
+  version = "2026.3.18.1";
   pyproject = false;
 
   src = fetchFromGitHub {
     owner = "lichess-bot-devs";
     repo = "lichess-bot";
-    rev = "960bcad4ec5069547cc5fcfd496c47a70280ff56";
-    hash = "sha256-Dc6R9OufJCcTN32Hx2BVauTwaO9/gWRq24hJ4pWRObY=";
+    rev = "a36742d99d27a6e942ded48d58716623d3ae71f5";
+    hash = "sha256-FtmBzfpMOUPioGXe0JqzpJi2/hL/EAI2tNU6X3xGSvk=";
   };
 
   propagatedBuildInputs = with python3Packages; [
